@@ -1,0 +1,27 @@
+<script src="../libraries/p5.js"></script>
+<script>
+var angle = 0;
+var x = 300, y = 250, r = 100;
+
+function setup()
+{
+    createCanvas(600, 500);
+    angleMode(DEGREES);
+    strokeWeight(10);
+}
+
+function draw()
+{
+    background("lightblue");
+
+    line(x, y, x + r * cos(angle), y + r * sin(angle));
+    line(x, y, x + r * 1.5 * cos(angle * 2), y + r * 1.5 * sin(angle * 2));
+    angle++;
+
+    if (angle > 360)
+    {
+        angle = 0;
+    }
+}
+
+</script>

@@ -1,0 +1,48 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup()
+{
+    createCanvas(600, 500);
+    background("lightblue");
+    noFill();
+
+    angleMode(DEGREES);
+
+    ellipse(300, 250, 300);
+
+    hLine(10, 10, 360);
+    vLine(10, 10, 360);
+
+    circle(300, 250, 100);
+}
+
+
+function hLine(x, y, w)
+{
+    for(var i = 0; i < w; i++)
+    {
+        point(x + i, y);
+    }
+}
+
+function vLine(x, y, w)
+{
+    for(var i = 0; i < w; i++)
+    {
+        point(x, y + i);
+    }
+}
+
+function circle(x, y, r)
+{
+    for(var angle = 0; angle < 360; angle++)
+    {
+        var x2 = x + r * cos(angle);
+        var y2 = y + r * sin(angle);
+
+        point(x2, y2);
+    }
+}
+
+</script>

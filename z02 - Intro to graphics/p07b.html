@@ -1,0 +1,26 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+// This function will be called
+// automatically by the code in p5.js
+function setup()
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    drawShape(400, 200, 100, 50, "red");
+    drawShape(200, 100, 70, 25, "blue");
+    drawShape(500, 100,50, 20, "green");
+}
+
+function drawShape(x, y, dw, dh, shapeColor)
+{
+    stroke(shapeColor);
+
+    var horizontalRadius = dw / 2;
+    
+    ellipse( x, y, dw, dh );
+    line( x - horizontalRadius, y, x + horizontalRadius, y  );
+    line(x, y - dh /2, x, y + dh /2);
+}
+</script>

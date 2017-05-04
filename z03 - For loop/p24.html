@@ -1,0 +1,21 @@
+<script>
+
+var s = DoSum(7, 17, 3);
+alert(s);
+
+
+function DoSum( from, to, step )
+{
+    var sum = 0;    
+
+    for ( var i = from; i <= to; i += step)
+    {
+        console.log(i);
+
+        sum = sum + i;
+    }
+
+    return sum;
+}
+
+</script>

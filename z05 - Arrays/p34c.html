@@ -1,0 +1,23 @@
+
+<script>
+
+var ar = [1, 2, 3, 5, 7];
+var avg = averageArray(ar);
+console.log(avg);
+
+// Returns the average of the numbers
+// contained in the array ar
+function averageArray(ar)
+{
+    var sum = 0;
+    var noElements = ar.length;
+
+    for( var i = 0; i < noElements; i++ )
+    {
+        sum += ar[i];
+    }
+
+    return sum / noElements;
+}
+
+</script>

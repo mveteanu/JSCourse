@@ -1,0 +1,24 @@
+<script>
+
+// Calculate the sum of the numbers in the
+// comma delimited string...
+
+var s = "2,3, 5, 7, 34, 35";
+
+var ar = s.split(",");
+
+console.log(ar);
+
+var sum = 0;
+
+for(var i = 0; i < ar.length; i++)
+{
+    var el = ar[i].trim();
+    var n = Number(el);
+
+    sum += n;
+}
+
+console.log(sum);
+
+</script>

@@ -1,0 +1,32 @@
+<script src="../libraries/p5.js"></script>
+<script>
+var brickWidth = 50;
+var brickHeight = 20;
+var brickSpace = 20;
+var rowSpace = 10;
+
+function setup()
+{
+    createCanvas(600, 500);
+    background("teal");
+
+    displayBricks();
+}
+
+function displayBricks()
+{
+    var noBricks = Math.floor((width - brickSpace) / ( brickWidth + brickSpace ));
+
+    for(var row = 0; row < 3; row++)
+    {    
+        for(var i = 0; i < noBricks; i++ )
+        {
+            var x = i * ( brickWidth + brickSpace ) + brickSpace;
+            var y = row * (brickHeight + rowSpace) + rowSpace;
+            
+            rect( x, y, brickWidth, brickHeight );
+        }
+    }
+}
+
+</script>

@@ -1,0 +1,33 @@
+<script>
+
+
+var p1 = [ "John", "Doe", 3, ["reading", "cooking"] ];
+var p2 = [ "Jane", "Doe", 3, ["walking", "cooking"] ];
+var p3 = [ "Lisa", "Foe", 3, ["footbal", "reading", "traveling"] ];
+
+var persons = [p1, p2, p3];
+
+//console.log(persons);
+
+DisplayPersons(persons);
+
+
+function DisplayPersons( arPersons )
+{
+    var text = "";
+
+    for ( var i = 0; i < arPersons.length; i++)
+    {
+        var arPerson = arPersons[i];
+
+        var fName = arPerson[0];
+        var lName = arPerson[1];
+        var noHobbies = arPerson[3].length;
+
+        text += fName + " " + lName + " - " + noHobbies + " hobbies\n";
+    }
+
+    alert( text );
+}
+
+</script>

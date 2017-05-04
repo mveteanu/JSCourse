@@ -1,0 +1,59 @@
+
+<script src="../libraries/p5.js"></script>
+
+<script>
+var wSquare = 64;
+var hSquare = 64;
+
+function setup()
+{
+    createCanvas(800, 600);
+    background("teal");
+    fill("lightblue");
+
+    CreateBoard(8, 8);
+}
+
+function CreateBoard(rows, cols)
+{
+    var rowStartColor = "black";        
+    
+    for (var row = 0; row < rows; row++)
+    {
+        CreateRow(row, cols, rowStartColor);
+
+        if ( rowStartColor == "black" )
+        {
+            rowStartColor = "white";
+        }
+        else if ( rowStartColor == "white" )
+        {
+            rowStartColor = "black";
+        }
+    }
+}
+
+function CreateRow(row, cols, startColor)
+{
+    var color = startColor;
+    
+    for(var col = 0; col < cols; col++)
+    {
+        var x = col * wSquare;
+        var y = row * hSquare;
+
+        fill(color);
+        rect(x, y, wSquare, hSquare);
+
+        if ( color == "black" )
+        {
+            color = "white";
+        }
+        else if ( color == "white" )
+        {
+            color = "black";
+        }
+    }
+}
+
+</script>

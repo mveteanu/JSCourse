@@ -1,0 +1,43 @@
+<script>
+
+var ar = [1, 2, 3, 9, 4];
+
+// var max = FindMax(ar);
+// alert(max);
+
+var pos = FindElement(3, ar);
+alert(pos);
+
+function FindElement(el, ar)
+{
+    for(var i = 0; i < ar.length; i++)
+    {
+        if ( ar[i] == el )
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+function FindMax(ar)
+{
+    // We assume the maximum is the el. on pos 0
+    var max = ar[0];
+
+    // Iterate through all the elements of array
+    for ( var i = 0; i < ar.length; i++)
+    {
+        // Check if any el is bigger than what we have
+        if (ar[i] > max)
+        {
+            // If so ... the new maximum is the new element
+            max = ar[i];
+        }
+    }
+
+    return max;
+}
+
+</script>

@@ -1,0 +1,22 @@
+<script>
+
+var a = 2;
+var b = "str";
+
+var ar = [1, 2, "abc"];
+
+var ar2 = [a, b, 1, "abc",
+            [ "a", "b", "c", [1, 2, 3]],
+            ar
+            ];
+
+var x = ar[0];
+
+var el4 = ar2[4];
+var y = el4[0];
+
+alert(x + "\n" + y);
+
+console.log(ar2);
+</script>
+

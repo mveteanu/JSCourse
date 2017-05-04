@@ -1,0 +1,38 @@
+<script>
+
+var ar = [1, 2, -43, 3, -3, 2, 4];
+
+var min = FindMin(ar);
+console.log(min);
+
+function FindMin(ar)
+{
+    var min = ar[0];
+
+    for ( var i = 0; i < ar.length; i++)
+    {
+        if ( ar[i] < min )
+        {
+            min = ar[i];
+        }
+    }
+
+    return min;
+}
+
+
+
+
+// for(var i = 0; i < ar.length; i++)
+// {
+//     if ( ar[i] > 0)
+//     {
+//         console.log( ar[i] );
+//     }
+// }
+
+
+
+
+
+</script>

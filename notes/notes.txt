@@ -1,0 +1,157 @@
+Motivational videos
+===================
+
+https://www.youtube.com/watch?v=6XvmhE1J9PY
+https://www.youtube.com/watch?v=wGFsNA5Hw2s
+https://www.youtube.com/watch?v=nPblG6ceqOs
+
+
+Lesson 1
+========
+
+- what is a web page
+- <script> tag to place JavaScript code inside a web page
+- edit a web page with notepad
+- load a web page in a browser from local file system
+- alert(1);
+
+
+Lesson 2
+========
+
+- introduce Visual Studio Code for easier .html editing
+- numbers, strings and expressions with operators
+
+
+Lesson 3
+========
+
+- defining and calling functions (without arguments or return values)
+- introducing p5.js and setup() function
+- introducing p5.js canvas and coordinate system
+- introducing basic p5.js functions: createCanvas, background, ellipse, line
+- assignment: draw a house or car
+
+
+Lesson 4
+========
+
+- real example of encapsulating code in functions (e.g. drawHouse, drawCar)
+- exapding drawing toolbox: point, rect, triangle, fill, noFill, stroke, noStroke
+- functions with parameters
+- code modularization using functions with parameters
+- introducing variables: declaration and assignment with constants
+
+
+Lesson 5
+========
+
+- more about variables: incrementing, decrementing, assigning complex expressions
+- for loop
+- return values from functions
+- excercise: make calculateSum function using for loop and return value
+- assignment: create a function that draws a grid, the cell size being provided as parameter
+
+
+Lesson 6
+========
+
+- recap what has been presented until now
+- exercise: make factorial function using for loop
+- assignment: display in a single alert() dialog the factorials of numbers from 1 to 10: 1!=1 2!=2 3!=6 ...
+
+
+Lesson 7
+========
+
+- recap for loop and do together the assignment from lesson 6 
+- present the "\n" character in strings
+- finding the length of a string using s.length
+- accessing individual characters inside a string s[i]
+- exercise to display all characters from within a string using a for loop
+- assignment: create a function displayDots(rows, cols) which should display a net of small dots made out of ellipses 
+
+
+Lesson 8
+========
+
+- exercise (not done): make a script to display the multiplication table - with 1 number then with all numbers from 1 - 10
+- arrays
+- adding, removing elements from arrays (push, splice)
+- for on arrays
+- homework: create a function to draw a bar chart
+
+
+Lesson 9 - 14+
+==============
+
+- recap
+
+
+Lesson(s)
+=========
+
+- if else
+
+- array exercices
+    - min in an array
+    - find an element in an array
+    - find all elements in an array
+    - concatenate two arrays
+
+- arrays and graphics
+    - plot array elements as big dots
+    - creat bar charts
+
+- graphics
+    - checker board
+
+Lesson(s)
+=========
+
+- p5.js draw() function
+- bouncing balls
+- balls with gravity
+- draw a sprite from an array
+- game: catch the dropping balls
+
+Lesson(s)
+=========
+- game: invaders
+
+Lesson
+======
+- inline objects
+
+Lesson
+======
+- string manipulation
+    - assignment: var s = "text";
+    - length of a string: s.length
+    - char at a position: s[i]
+    - position of a substring: indexOf(str);
+    - extract a substring: substring(i1, i2)
+    - split a string: split("str")
+    - toUpperCase() / toLowerCase()
+    - startsWith() / endsWith()
+    - remove whitespaces from beginning and end: trim()
+    - replace(str1, str2)
+    - Number(str) and .toString()
+
+Lesson
+======
+
+- polar to cartesian coordinates
+    - circle from points
+    - analog clock
+- cartesian to polar coordinates
+    - line pointing to mouse cursor
+    - magnetic field
+    - eyes following mouse
+
+Exercices
+=========
+
+- find number of words ocurances in a text
+- plot the sine wave
+- recursion

@@ -1,0 +1,26 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup() 
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    // To create a basic for you need:
+    //  - initial value
+    //  - end value
+    //  - step
+
+    for(var n = 1; n <= 3; n++)
+    {
+        alert(n);
+    }
+
+    for(var y = 0; y <= 400; y += 10)
+    {
+        line(0, y, 600, y);
+    }
+
+}
+
+</script>

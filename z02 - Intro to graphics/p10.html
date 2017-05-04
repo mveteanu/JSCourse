@@ -1,0 +1,50 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup() 
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    var y = 0;
+    var delta = 10;
+
+    y = 10; // 10
+    line(0, y, 600, y);
+    
+    y = 10 + 5; // 15
+    line(0, y, 600, y);
+
+    y = y + 10; // 25
+    line(0, y, 600, y);
+
+    y = y + delta; // 35
+    line(0, y, 600, y);
+
+    y = y + delta;
+    line(0, y, 600, y);
+
+    y = y + delta;
+    line(0, y, 600, y);
+
+    y = y + delta;
+    line(0, y, 600, y);
+
+    y += delta; // this is the same as
+                // y = y + delta;
+                // similar for -=
+    line(0, y, 600, y);
+
+    y++; // same as y = y + 1
+         // similar for --;
+    line(0, y, 600, y);
+
+    y++;
+    line(0, y, 600, y);
+
+    y++;
+    line(0, y, 600, y);
+
+}
+
+</script>

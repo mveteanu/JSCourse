@@ -1,0 +1,34 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+// Representing colors using R, G, B components
+
+function setup()
+{
+    createCanvas(600, 520);
+
+    // creates bands of shades of pure R, G, B colors
+    for(var i = 0; i <= 255; i++)
+    {
+        stroke(i, 0, 0);
+        line(i, 0, i, 100);
+
+        stroke(0, i, 0);
+        line(i, 110, i, 210);
+
+        stroke(0, 0, i);
+        line(i, 220, i, 320);
+    }
+
+    // create a square by cycling through red on horizontal
+    // and through green on vertical
+    for(var i = 0; i <= 255; i++)
+    {
+        for(var j = 0; j <= 255; j++)
+        {
+            stroke(i, j, 0);
+            point( 265 + i, j );
+        }
+    }
+}
+</script>

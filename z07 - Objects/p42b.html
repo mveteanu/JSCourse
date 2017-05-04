@@ -1,0 +1,54 @@
+<script>
+var person = 
+{	firstName : "John",
+	lastName: "Doe",
+	age : 100,
+	hobbies : ["H1","H2", "H3"],
+	address :
+	{	city : "Hollywood",
+		state : "FL",
+		street : "4000 Hollywood Blvd.",
+		zip : "33020"
+	}
+}
+
+displayPerson(person,false);
+displayPerson(person,true);
+
+function displayPerson(p, bAlert){
+
+	// var br;
+
+	// if (bAlert)
+	// {
+	// 	br = "\n";	
+	// }
+
+	// else 
+	// {
+	// 	br = "<br>";
+	// }
+	
+	// ternary operator
+	var br = bAlert ? "\n" : "<br>";
+
+	var s = "USER INFO:" + br + br + 
+			p.lastName + ", " +
+			p.firstName + ", " +  
+			p.age + br + 
+			p.address.street + br + 
+			p.address.city + ", " + 
+			p.address.state + br + 
+			p.address.zip;
+
+	if (bAlert)
+	{
+		alert(s);
+	}
+	else
+	{
+		document.write(s);
+	}
+}
+
+</script>

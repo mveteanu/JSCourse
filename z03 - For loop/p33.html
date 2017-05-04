@@ -1,0 +1,40 @@
+<script>
+
+console.log(Sum(7, 10));
+console.log(Average(7, 10));
+console.log(AverageArray([2, 3, 17, 100, 130]))
+
+// Returns the average of all the numbers in the array
+function AverageArray(ar)
+{
+    var sum = 0;
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        sum += ar[i];
+    }
+
+    return sum / ar.length;
+}
+
+// Returns the average of all consecutive 
+// natural numbers from n to m, where m >= n 
+function Average(n, m)
+{
+    var sum = Sum(n, m);
+    return sum / (m - n + 1);
+}
+
+function Sum(n, m)
+{
+    var sum = 0;
+
+    for(var i = n; i <= m; i++)
+    {
+        sum += i;
+    }
+
+    return sum;
+}
+
+</script>

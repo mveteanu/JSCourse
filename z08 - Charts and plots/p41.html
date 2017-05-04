@@ -1,0 +1,44 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+var sprite = [ 0, 0, 0, 1, 0, 0, 0, 0,
+               0, 0, 1, 1, 1, 0, 0, 0,
+               0, 1, 1, 1, 1, 1, 0, 0,
+               0, 1, 0, 0, 0, 1, 0, 0,
+               0, 1, 0, 0, 0, 1, 0, 0,
+               0, 1, 0, 0, 0, 1, 0, 0,
+               0, 1, 0, 1, 0, 1, 0, 0,
+               0, 1, 1, 1, 1, 1, 0, 0 ];
+
+function setup() 
+{
+  createCanvas(600, 500);
+  background("teal");
+}
+
+function mousePressed()
+{
+    displaySprite(mouseX, mouseY, sprite, 10);
+}
+
+function displaySprite(x, y, sprite, scale)
+{
+    var colors = ["teal", "black"];
+    noStroke();
+
+    for(var row = 0; row < 8; row++)
+    {
+        for (col = 0; col < 8; col++)
+        {
+            var squareVal = sprite[row * 8 + col];
+
+            var squareX = x + col * scale;
+            var squareY = y + row * scale;
+
+            fill( colors[squareVal] );
+            rect( squareX, squareY, scale, scale );
+        }
+    }
+}
+
+</script>

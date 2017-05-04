@@ -1,0 +1,33 @@
+<script src="../libraries/p5.js"></script>
+ 
+<script>
+var y = 30;
+var speed = 3;
+var gravity = 5;
+
+function setup()
+{
+    createCanvas(600, 500);
+}
+
+function draw()
+{
+    background("teal");
+    displayBall();
+}
+
+function displayBall()
+{
+    ellipse(300, y, 10);
+
+    if ( y > height )
+    {
+        speed = speed * -1;
+        y = height;
+    }
+
+    speed += gravity;
+    y += speed;
+}
+
+</script>

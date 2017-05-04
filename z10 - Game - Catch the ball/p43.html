@@ -1,0 +1,102 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+var balls = [];
+var ballsDropped = 0;
+var ballsCaught = 0;
+
+function setup()
+{
+    createCanvas(600, 500);
+
+    for(var i = 0; i < 10; i++)
+    {
+        addBall();
+    }
+}
+
+function draw()
+{
+    background("teal");
+
+    displayBalls(balls);
+    displayStats();
+}
+
+function mousePressed()
+{
+    var ball = findHitBall(balls);
+    if ( ball != null )
+    {
+        ballsCaught++;
+
+        initBall(ball);
+    }
+}
+
+function findHitBall(arBalls)
+{
+    for(var i = 0; i < arBalls.length; i++)
+    {
+        var ball = arBalls[i];
+        var mouseDist = dist(mouseX, mouseY, ball.x, ball.y);
+
+        if ( mouseDist < ball.size)
+        {
+            return ball;
+        }
+    }
+
+    return null;
+}
+
+function displayStats()
+{
+    fill("black");
+    text( "Caught: " + ballsCaught, 10, height - 40);
+    text( "Dropped: " + ballsDropped, 10, height - 20);
+}
+
+function displayBalls(arBalls)
+{
+    for(var i = 0; i < arBalls.length; i++)
+    {
+        displayBall( arBalls[i] );
+    }
+}
+
+function displayBall(ball)
+{
+    fill(ball.color);
+    ellipse(ball.x, ball.y, ball.size);
+
+    ball.y += ball.size / 10;
+
+    // test if hits the ground
+    if ( ball.y > height )
+    {
+       ballsDropped++;
+
+       // reinit the ball
+       initBall(ball);
+    }
+}
+
+function addBall()
+{
+    var ball = { x : 0, y : 0, color : "", size: 10 };
+    initBall(ball);
+
+    balls.push(ball);
+}
+
+
+function initBall(ball)
+{
+    ball.x = random(10, width - 10);
+    ball.y = 10;
+    ball.color = random(["white", "yellow", "green", "blue", "red"]);
+    ball.size = random(10, 30);
+}
+
+</script>

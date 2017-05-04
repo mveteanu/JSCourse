@@ -1,0 +1,40 @@
+<script>
+
+
+var x1 = basicFactorial(10);
+alert(x1);
+
+var x2 = factorial(10);
+alert(x2);
+
+function basicFactorial(n)
+{
+    var prod = 1;
+
+    prod = prod * 1;
+    prod = prod * 2;
+    prod = prod * 3;
+    prod = prod * 4;
+    prod = prod * 5;
+    prod = prod * 6;
+    prod = prod * 7;
+    prod = prod * 8;
+    prod = prod * 9;
+    prod = prod * 10;
+    
+    return prod;
+}
+
+function factorial(n)
+{
+    var prod = 1;
+
+    for (var i = 1; i <= n; i++)
+    {
+        prod = prod * i;
+    }
+
+    return prod;
+}
+
+</script>

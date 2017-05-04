@@ -1,0 +1,25 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup()
+{
+    createCanvas(600, 400);
+    background("teal");
+
+    displayMatrix( [ [100, 100], 
+                    [120, 100],
+                    [140, 100] ] );
+}
+
+function displayMatrix(arDots)
+{
+    for(var i = 0; i < arDots.length; i++)
+    {
+        var dot = arDots[i];
+        //console.log(dot);
+
+        ellipse(dot[0], dot[1], 10, 10);
+    }
+}
+
+</script>

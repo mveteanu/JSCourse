@@ -1,0 +1,53 @@
+<script>
+
+var ar = [2, -3, 4, -7, 10, -7, 5];
+
+// console.log(FindFirstElement(ar, -7));
+// console.log(FindFirstElement(ar, 100));
+
+// console.log(FindAllElements(ar, -7));
+// console.log(FindAllElements(ar, 100));
+
+
+var p = FindFirstElement(ar, 100);
+if ( p < 0 )
+{
+    console.log("Not found!")
+}
+else
+{
+    console.log("Found on position: " + p)
+}
+
+
+
+function FindAllElements(ar, el)
+{
+    var arPos = [];
+    
+    for( var i = 0; i < ar.length; i++)
+    {
+        if ( ar[i] == el )
+        {
+            arPos.push(i);
+        }
+    }
+    
+    return arPos;
+}
+
+function FindFirstElement(ar, el)
+{
+    for( var i = 0; i < ar.length; i++)
+    {
+        if ( ar[i] == el )
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+
+</script>

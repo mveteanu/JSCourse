@@ -1,0 +1,25 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+// Representing colors using R, G, B components
+
+function setup()
+{
+    createCanvas(600, 500);
+    background(44, 147, 222);
+
+    //fill("#ff0000");
+    noFill();
+
+    for(var r = 0; r <= 255; r++)
+    {
+        stroke(r, 0, 0);
+        line(r, 0, r, 100);
+
+        //ellipse(width / 2, height /2, r * 2);
+    }
+
+    
+}
+
+</script>

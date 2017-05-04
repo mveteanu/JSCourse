@@ -1,0 +1,30 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+// This function will be called
+// automatically by the code in p5.js
+function setup()
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    drawCar(300, 200, 100, 50);
+}
+
+function drawCar(x, y, carWidth, carHeight)
+{
+    drawCarBody(x, y, carWidth, carHeight);
+    drawCarWheel( x + 20, y, 30 );
+    drawCarWheel( x + carWidth - 20, y, 30);
+}
+
+function drawCarBody(x, y, carWidth, carHeight)
+{
+    // use line, rect, ellipse to draw body
+}
+
+function drawCarWheel(x, y, r)
+{
+    // use ellipse, line to draw wheel
+}
+</script>

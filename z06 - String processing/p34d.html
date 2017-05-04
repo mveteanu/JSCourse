@@ -1,0 +1,27 @@
+<script>
+
+var ar = ["Alex", "Anna", "Ben", "Ned", "Ren"];
+var ar2 = findStrings(ar, "A");
+console.log(ar2);
+
+// Function finds all the strings from arStrings
+// that starts with character chr
+function findStrings(arStrings, chr)
+{
+    var ar = [];
+
+    for (var i = 0; i < arStrings.length; i++)
+    {
+        var s = arStrings[i];
+
+        if ( s[0] == chr )
+        {
+            ar.push(s);
+        }
+    }
+
+    return ar;
+}
+
+
+</script>

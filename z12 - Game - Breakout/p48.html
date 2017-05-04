@@ -1,0 +1,110 @@
+<script src="../libraries/p5.js"></script>
+<script>
+var paddleWidth = 40;
+var brickWidth = 50;
+var brickHeight = 20;
+var brickSpace = 20;
+var rowSpace = 10;
+
+var xPaddle;
+
+var ball;
+
+function setup()
+{
+    createCanvas(600, 500);
+
+    xPaddle = width / 2;
+    ball = {
+        x : 0,
+        y : 0,
+        xvel : 5,
+        yvel : -5,
+        inMotion : false
+    };
+}
+
+function draw()
+{
+    background("teal");
+
+    readKeys();
+    displayBricks();
+    displayPaddle();
+
+    updateBall();
+    displayBall();
+}
+
+function updateBall()
+{
+    if ( !ball.inMotion )
+    {
+        ball.x = xPaddle + paddleWidth / 2;
+        ball.y = height - 25;
+    }
+    else
+    {
+        updateBallInMotion();
+    }
+}
+
+function updateBallInMotion()
+{
+    ball.x += ball.xvel;
+    ball.y += ball.yvel;
+
+    if ( ball.x < 0 || ball.x > width )
+    {
+        ball.xvel *= -1;
+    }
+
+    if ( ball.y < 0 )
+    {
+        ball.yvel *= -1;
+    }
+}
+
+function displayBall()
+{
+    ellipse( ball.x, ball.y, 10 );
+}
+
+function readKeys()
+{
+    if ( keyIsDown( LEFT_ARROW ) && xPaddle > 0  )
+    {
+        xPaddle -= 3;
+    }
+    else if ( keyIsDown( RIGHT_ARROW) && xPaddle < width - paddleWidth )
+    {
+        xPaddle += 3;
+    }
+    else if ( keyIsDown (32) )  // SPACE
+    {
+        ball.inMotion = true;
+    }
+}
+
+function displayBricks()
+{
+    var noBricks = Math.floor((width - brickSpace) / ( brickWidth + brickSpace ));
+
+    for(var row = 0; row < 3; row++)
+    {    
+        for(var i = 0; i < noBricks; i++ )
+        {
+            var x = i * ( brickWidth + brickSpace ) + brickSpace;
+            var y = row * (brickHeight + rowSpace) + rowSpace;
+            
+            rect( x, y, brickWidth, brickHeight );
+        }
+    }
+}
+
+function displayPaddle()
+{
+    rect( xPaddle, height - 20, paddleWidth, 10 );
+}
+
+</script>

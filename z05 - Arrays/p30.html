@@ -1,0 +1,84 @@
+<script>
+
+// - ar = [1, 2, "ABC", [. ..] ]
+// - ar[0]
+// - ar.length
+// - ar.push(el)
+// - ar.splice(pos, 1)
+
+// var ar1 = [10, 20, 30, 40, 50, 60, 70];
+// var ar = CopyArray(ar1, 2, 3);
+// console.log(ar);
+
+// var ar = SumArrays([1,2,3],[1,2,3]);
+// console.log(ar);
+
+var ar = ConcatArrays([1, 2, 3], [1, 2, 3, 4, 5]);
+console.log(ar);
+
+function ConcatArrays(ar1, ar2)
+{
+    var ar = [];
+
+    for (var i = 0; i < ar1.length; i++)
+    {
+        ar.push(ar1[i]);
+    }
+
+    for (var i = 0; i < ar2.length; i++)
+    {
+        ar.push(ar2[i]);
+    }
+
+    return ar;
+}
+
+
+function SumArrays(ar1, ar2)
+{
+    var ar = [];
+    var n = ar1.length;
+
+    for(var i = 0; i < n; i++)
+    {
+        ar.push( ar1[i] + ar2[i] );
+    }
+
+    return ar;
+}
+
+
+function CopyArray(ar, index, count)
+{
+    var ar2 = [];
+
+    // for ( var i = index; i < index + count; i++ )
+    // {
+    //     ar2.push( ar[i] );
+    // }
+
+    for ( var i = 0; i < count; i++ )
+    {
+        ar2.push( ar[index + i] );
+    }
+
+
+    return ar2;
+}
+
+
+
+function ReverseArray(ar)
+{
+    var ar2 = [];
+
+    for ( var i = ar.length - 1; i >= 0; i-- )
+    {
+        var el = ar[i];
+        ar2.push( el );
+    }
+
+    return ar2;
+}
+
+</script>

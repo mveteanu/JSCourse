@@ -1,0 +1,29 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup() 
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    displayDots(30, 30, 3, 5, 15, 20);
+    displayDots(130, 130, 5, 10, 15, 30);
+    displayDots(350, 300, 3, 5, 20, 25);
+}
+
+
+function displayDots(startX, startY, rows, cols, dotSize, space)
+{
+    for(var row = 0; row < rows; row++)
+    {
+        for(var col = 0; col < cols; col++)
+        {
+            var x = startX + col * space;
+            var y = startY + row * space;
+
+            ellipse(x, y, dotSize, dotSize);
+        }
+    }
+}
+
+</script>

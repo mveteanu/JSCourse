@@ -1,0 +1,59 @@
+<script src="../libraries/p5.js"></script>
+ 
+<script>
+var x = 0;
+var y = 1;
+var speed = 2;
+var gravity = 3;
+var color = 4;
+
+var balls;
+
+function setup()
+{
+    createCanvas(600, 500);
+    balls = createBalls();
+}
+
+function draw()
+{
+    background("teal");
+    displayBalls(balls);
+}
+
+function createBalls()
+{
+    var balls = [];
+
+    for ( var i = 0; i < 10; i++)
+    {
+        var ball = [30 + 50 * i, 30, 1 + random(1, 3), 0.1 + random(1, 2), "white"];
+        balls.push(ball);
+    }
+
+    return balls;
+}
+
+function displayBalls(balls)
+{
+    for(var i = 0; i < balls.length; i++)
+    {
+        displayBall(balls[i]);
+    }
+}
+
+function displayBall(ball)
+{
+    ellipse(ball[x], ball[y], 10);
+
+    if ( ball[y] > height )
+    {
+        ball[speed] = ball[speed] * -1;
+        ball[y] = height;
+    }
+
+    ball[speed] += ball[gravity];
+    ball[y] += ball[speed];
+}
+
+</script>

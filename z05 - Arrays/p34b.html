@@ -1,0 +1,32 @@
+<script>
+
+// var arValues = [2, 5, 7, 12, -3, 23, 45];
+
+// var ar = findValues(arValues, 5);
+
+// console.log(arValues);
+// console.log(ar);
+
+console.log ( findValues( [2, 3, 5], 5 ) );
+
+
+// Returns all numbers from array ar
+// that are less than n
+function findValues(ar, n)
+{
+    var arRet = [];
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        if (ar[i] < n)
+        {
+            arRet.push(ar[i]);
+        }
+    }
+
+    return arRet;
+}
+
+
+</script>
+

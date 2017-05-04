@@ -1,0 +1,84 @@
+<script>
+
+var text = "JavaScript is also used in environments that are not Web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side Web applications. On the client side, developers have traditionally implemented JavaScript as an interpreted language, but more recent browsers perform just-in-time compilation. Programmers also use JavaScript in video-game development, in crafting desktop and mobile applications, and in server-side network programming with run-time environments such as Node.js.";
+
+//console.log(text);
+//console.log(getWords(text));
+//console.log(getWordCount(text));
+
+var arStats = getWordCount(text);
+var s = getStatAsText(arStats); 
+alert(s);
+
+function getStatAsText(arStats)
+{
+    var s = "";
+    
+    for(var i = 0; i < arStats.length; i++)
+    {
+        var arWord = arStats[i];
+        s += arWord[0] + " - " + arWord[1] + "\n";
+    }
+
+    return s;
+}
+
+// Returns an array of arrays containing the 
+// number of occurances of each word inside the text
+// [ [ "word1", 3 ], [ "word2", 5], ... ]
+function getWordCount(text)
+{
+    var arStats = [];
+
+    var arWords = getWords(text);
+
+    for(var i = 0; i < arWords.length; i++)
+    {
+        var word = arWords[i];
+        var index = getWordStatIndex(arStats, word);
+
+        if ( index >= 0 ) 
+        {
+            // if word stat already exists...
+            // then just increment the counter
+            var arStat = arStats[index];
+            //arStats[index] = [word, arStat[1] + 1];
+            arStat[1]++;
+        }
+        else
+        {
+            // ... othewise add a new stat for the new word
+            arStats.push( [ word, 1 ] );
+        }
+    }
+
+    return arStats;
+}
+
+// Scan the array of word statistics for word "s",
+// and if the word is found it returns the index 
+// in the statistics array, otherwise -1.
+function getWordStatIndex(ar, s)
+{
+    for(var i = 0; i < ar.length; i++)
+    {
+        var arStat = ar[i];
+        if (arStat[0] == s)
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+// Returns an array with all the words inside text
+function getWords(text)
+{
+    var s = text.replace(",", ""); // fix replace
+    var ar = s.split(" ");
+
+    return ar;
+}
+
+</script>

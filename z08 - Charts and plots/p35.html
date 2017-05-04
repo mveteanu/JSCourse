@@ -1,0 +1,34 @@
+
+<script src="../libraries/p5.js"></script>
+
+<script>
+
+function setup()
+{
+    createCanvas(800, 600);
+    background("lightblue");
+
+    var arY = [23, 147, 90, 0, 325, 500];
+    PlotArray(arY, 800, 600);
+}
+
+function PlotArray(arY, width, height)
+{
+    var padding = 50;
+    var dx = (width - padding * 2) / (arY.length - 1);
+
+    rect( padding, padding, width - padding * 2, height - padding * 2 );
+
+    for(var i = 0; i < arY.length; i++)
+    {
+        var x = padding + i * dx;
+        var y = height - arY[i] - padding;
+        var s = "(" + arY[i] + ")";
+        
+        ellipse(x, y, 10);
+        text( s, x + 10, y);
+    }    
+}
+
+</script>
+

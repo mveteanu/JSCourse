@@ -1,0 +1,40 @@
+
+<script src="../libraries/p5.js"></script>
+
+<script>
+
+var barWidth = 50;
+
+function setup()
+{
+    createCanvas(800, 600);
+    background("teal");
+    fill("lightblue");
+
+    var ar = [25, 50, 35, 10, 20, 100];
+    CreateChart(ar);
+}
+
+function CreateChart(ar)
+{
+    var n = ar.length;
+
+    for ( var i = 0; i < n; i++ )
+    {
+        CreateBar(i, ar[i], n);
+    }
+}
+
+function CreateBar(barNo, barValue, noBars)
+{
+    var barHeigth = (barValue * height) / 100;
+    var dx = (width - noBars * barWidth) / ( noBars - 1);
+ 
+    var x = barNo * (dx + barWidth);
+    var y = height - barHeigth;
+
+    rect( x, y, barWidth - 1, barHeigth - 1 );
+}
+
+</script>
+

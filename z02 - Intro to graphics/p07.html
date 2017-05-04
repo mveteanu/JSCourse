@@ -1,0 +1,22 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+// This function will be called
+// automatically by the code in p5.js
+function setup()
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    drawShape(400, 200, 100, 50);
+    drawShape(200, 100, 70, 25);
+    drawShape(500, 100,50, 20);
+}
+
+function drawShape(x, y, dw, dh)
+{
+    ellipse( x, y, dw, dh );
+    line( x - dw / 2, y, x + dw / 2, y  );
+    line(x, y - dh /2, x, y + dh /2);
+}
+</script>

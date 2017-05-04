@@ -1,0 +1,36 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup()
+{
+    createCanvas(600, 400);
+    background("lightblue");
+
+    drawCar();
+}
+
+function drawCar()
+{
+    line(100, 200, 500, 200);
+    line(100, 300, 500, 300);
+    line(100, 295, 500, 295);
+    line(100, 200, 100, 300);
+    line(500, 200, 500, 300);
+
+    line(100 + 50 + 50, 100, 100 + 50, 200 );
+    line(100 + 50 + 50, 100, 400, 100);
+    line(400, 100, 450, 200);
+
+    line(300, 100, 300, 300);
+    line(305, 200, 305, 300);
+
+    ellipse(200, 300, 100);
+    ellipse(200, 300, 90);
+    ellipse(200, 300, 30);
+
+    ellipse(400, 300, 100);
+    ellipse(400, 300, 90);
+    ellipse(400, 300, 30);
+}
+
+</script>

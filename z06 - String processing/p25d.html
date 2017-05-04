@@ -1,0 +1,59 @@
+<script>
+
+var csv = "Person,Month,Points\n" + 
+        "Melinda,JAN,230\n" +
+        "Raluca,JAN,10\n" +
+        "Gaby,FEB,500\n" +
+        "Natalia,FEB,1000\n" +
+        "Conelia,APR,5\n";
+
+console.log(csv);
+
+var ar = csvToArray(csv, true);
+console.log(ar);
+
+var points = getTotalPoints(ar);
+console.log(points);
+
+
+function getTotalPoints(ar)
+{
+    var sum = 0;
+    for(var i = 0; i < ar.length; i++)
+    {
+        var el = ar[i];
+        var point = el[2];
+        sum += point;
+    }
+    return sum;
+}
+
+function csvToArray(csv, hasHeaders)
+{
+    var ar = [];
+    
+    var rows = csv.split("\n");
+    //console.log(rows);
+
+    var dataStarts = hasHeaders ? 1 : 0;
+
+    for(var i = dataStarts; i < rows.length; i++)
+    {
+        var row = rows[i];
+        var cells = row.split(",");
+        //console.log(cells);
+
+        if (cells.length == 3)
+        {
+            var person = cells[0];
+            var month = cells[1];
+            var points = Number(cells[2]);
+            
+            ar.push( [person, month, points] );
+        }
+    }
+
+    return ar;
+}
+
+</script>

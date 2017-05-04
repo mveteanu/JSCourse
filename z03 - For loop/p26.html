@@ -1,0 +1,101 @@
+<script>
+
+// Define a variable...
+// var myName = "STARLIMS";
+// alert(myName);
+
+// for(var i = 1; i <= 10; i++)
+// {
+//     alert(i);
+// }
+
+// var sum = 0;
+// for(var i = 1; i <= 10; i++)
+// {
+//     sum = sum + i;
+// }
+// alert(sum);
+
+// var prod = 1;
+// for(var i = 1; i <= 10; i++)
+// {
+//     prod = prod * i;
+// }
+// alert(prod);
+
+
+// Calculate 1 + 2 + 3 + ... + n
+// function Sum(n)
+// {
+//     var sum = 0;
+//     for(var i = 1; i <= n; i++)
+//     {
+//         sum = sum + i;
+//     }
+//     return sum;
+// }
+
+// Calculate n!
+// function Prod(n)
+// {
+//     var prod = 1;
+//     for(var i = 1; i <= n; i++)
+//     {
+//         prod = prod * i;
+//     }
+//     return prod;
+// }
+
+// var sum = Sum(10);
+// var prod = Prod(10);
+// alert(sum + "\n" + prod)
+
+
+// Calculate 1! + 2! + 3! + ... + n!
+// function Sum(n)
+// {
+//     var sum = 0;
+//     for(var i = 1; i <= n; i++)
+//     {
+//         sum = sum + Prod(i);
+//     }
+//     return sum;
+// }
+
+// // Calculate n!
+// function Prod(n)
+// {
+//     var prod = 1;
+//     for(var i = 1; i <= n; i++)
+//     {
+//         prod = prod * i;
+//     }
+//     return prod;
+// }
+
+// var sum = Sum(10);
+// document.write("Sum = " + sum);
+
+
+function Mult1(m, n)
+{
+    return m * n;
+}
+
+function Mult2(m, n)
+{
+    var sum = 0;
+
+    for (var i = 1; i <= n; i++)
+    {
+        sum += m;
+    }
+
+    return sum;
+}
+
+var r1 = Mult1(3, 4);
+var r2 = Mult2(3, 4);
+document.write( r1 + " --- " + r2 );
+
+</script>

@@ -1,0 +1,33 @@
+<script>
+
+var ar = GetArray(10);
+var sum = GetSum(ar);
+alert(sum);
+
+alert( GetSum( [1, 2, 3] ) );
+
+function GetSum(ar)
+{
+    var sum = 0;
+
+    for (var i = 0; i < ar.length; i++)
+    {
+        sum += ar[i];
+    }
+
+    return sum;
+}
+
+function GetArray(n)
+{
+    var ar = [];
+
+    for ( var i = 1; i <= n; i++)
+    {
+        ar.push(i);
+    }
+
+    return ar;
+}
+
+</script>

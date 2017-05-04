@@ -1,0 +1,87 @@
+<script>
+
+console.log( getNaturalNumbers(10) );
+console.log( getEvenNumbers(10) );
+console.log( isPrime(2), isPrime(3), isPrime(9) );
+console.log( getPrimeNumbers(100) );
+console.log( getPrimeNumbersSum(100) );
+
+// Returns the sum of prime numbers smaller than n
+function getPrimeNumbersSum(n)
+{
+    var sum = 0;
+
+    for(var i = 1; i <= n; i++)
+    {
+        if ( isPrime(i) )
+        {
+            sum += i;
+        }
+    }
+
+    return sum;
+}
+
+// Returns an array of prime numbers up to n
+function getPrimeNumbers(n)
+{
+    var ar = [];
+
+    for(var i = 1; i <= n; i++)
+    {
+        if ( isPrime(i) )
+        {
+            ar.push(i);
+        }
+    }
+
+    return ar;    
+}
+
+// Returns true if number n is prime...
+// ... to do: optimize the for upper limit
+function isPrime(n)
+{
+    if ( n == 1 )
+        return false;
+    
+    for(var i = 2; i < n; i++)
+    {
+        if ( n % i == 0 )
+            return false;
+    }
+
+    return true;
+}
+
+// Returns an array with all natural even numbers
+// from 0 to n
+function getEvenNumbers(n)
+{
+    var ar = [];
+
+    for(var i = 0; i <= n; i += 2)
+    {
+        ar.push(i);
+    }
+
+    return ar;    
+   
+}
+
+// Returns an array with all natural numbers
+// from 1 to n
+function getNaturalNumbers(n)
+{
+    var ar = [];
+
+    for(var i = 1; i <= n; i++)
+    {
+        ar.push(i);
+    }
+
+    return ar;    
+}
+
+
+</script>
