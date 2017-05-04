@@ -1,2 +1,2 @@
 # JSCourse
-Materials for JavaScript course that I teach in 2017
+Entire code base of the JavaScript course that I teach in 2017
