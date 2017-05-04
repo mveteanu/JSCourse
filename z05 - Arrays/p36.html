@@ -1,0 +1,29 @@
+<script>
+
+var ar = [1, 5, 31, 3, 14, 9, 5, 7];
+
+console.log(containsPair(ar, 12));
+console.log(containsPair(ar, 100));
+console.log(containsPair(ar, 62));
+
+// var ar = [1, 2, 4, 4];
+// console.log(containsPair(ar, 8));
+
+// Returns true if in the provided array
+// there is pair that has the sum of elements
+// equal to the provided sum
+function containsPair(ar, sum)
+{
+    for(var i = 0; i < ar.length; i++)
+    {
+        for(var j = i + 1; j < ar.length; j++)
+        {
+            if (ar[i] + ar[j] == sum)
+                return true;
+        }
+    }
+
+    return false;
+}
+
+</script>
