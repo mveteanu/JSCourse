@@ -149,9 +149,12 @@ Lesson
     - magnetic field
     - eyes following mouse
 
-Exercices
-=========
+
+Backlog
+=======
 
 - find number of words ocurances in a text
 - plot the sine wave
+- plot the graph of a function (e.g. polynomial)
+- bubble sort
 - recursion
