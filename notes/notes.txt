@@ -101,7 +101,7 @@ Lesson(s)
 
 - arrays and graphics
     - plot array elements as big dots
-    - creat bar charts
+    - create bar charts
 
 - graphics
     - checker board
