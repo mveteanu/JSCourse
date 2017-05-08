@@ -153,8 +153,11 @@ Lesson
 Backlog
 =======
 
-- find number of words ocurances in a text
+- find number of words ocurances in a text (using associative arrays)
 - plot the sine wave
 - plot the graph of a function (e.g. polynomial)
 - bubble sort
 - recursion
+- ASCII code -> encrypt / decrypt text by shifting letters
+- 2D matrixes
+- functions as data
