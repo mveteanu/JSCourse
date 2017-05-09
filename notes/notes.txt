@@ -148,7 +148,7 @@ Lesson
     - line pointing to mouse cursor
     - magnetic field
     - eyes following mouse
-
+- RGB color model
 
 Backlog
 =======
@@ -159,5 +159,7 @@ Backlog
 - bubble sort
 - recursion
 - ASCII code -> encrypt / decrypt text by shifting letters
+    - str.charCodeAt(index)
+    - String.fromCharCode(num1, num2, ...)
 - 2D matrixes
 - functions as data
