@@ -1,0 +1,48 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+function setup()
+{
+    createCanvas(600, 500);
+    background("lightblue");
+
+    plotFunction(-10, 10);
+}
+
+function plotFunction(x1, x2)
+{
+    var ar = getFunctionValues(x1, x2, 1000);
+    console.log(ar);
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        var x = ar[i].x;
+        var y = ar[i].y;
+
+        var screenX = map(x, x1, x2, 0, width - 1);
+        var screenY = map(y, 0, 160, height - 1, 0)
+
+        point(screenX, screenY);
+    }
+}
+
+function getFunctionValues(x1, x2, n)
+{
+    var ar = [];
+
+    for(var i = 0; i < n; i++)
+    {
+        var x = map( i, 0, n-1, x1, x2 );
+        var y = myFunction(x);
+        ar.push( {x: x, y: y} );
+    }
+
+    return ar;
+}
+
+function myFunction(x)
+{
+    return x * x + 2 * x + 3;
+}
+
+</script>
