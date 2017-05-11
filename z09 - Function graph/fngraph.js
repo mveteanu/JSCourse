@@ -1,3 +1,11 @@
+
+// This is a custom library that can be used in HTML pages for plotting graphs of math functions
+// The library was initially developed in the previous example and then extracted as separate .js file
+
+
+// This is the main "public" method of this library.
+// The method takes as arguments the function that should be plotted
+// and the interval for x -> (x1, x2) for which will do the graph
 function plotFunction(fn, x1, x2)
 {
     var o = getFunctionValues(fn, x1, x2, 1000);
