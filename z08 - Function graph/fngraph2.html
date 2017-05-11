@@ -1,0 +1,30 @@
+<script src="../libraries/p5.js"></script>
+<script src="fngraph.js"></script>
+<script>
+
+function setup()
+{
+    createCanvas(600, 500);
+    background("lightblue");
+
+    plotFunction(myFunction1, -10, 10);
+    //plotFunction(myFunction2, -PI, PI);
+    //plotFunction(myFunction3, -PI, PI);
+}
+
+function myFunction1(x)
+{
+    return x * x + 2 * x - 30;
+}
+
+function myFunction2(x)
+{
+    return sin(x);
+}
+
+function myFunction3(x)
+{
+    return sin(exp(x));
+}
+
+</script>

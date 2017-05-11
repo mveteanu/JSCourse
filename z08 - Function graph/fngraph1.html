@@ -9,6 +9,7 @@ function setup()
     plotFunction(-PI, PI);
 }
 
+
 function myFunction(x)
 {
     return x * x + 2 * x - 30;
@@ -43,6 +44,9 @@ function drawFunctionAxes(x1, x2, y1, y2)
     }
 }
 
+// Plot the function graph using the values from array ar
+// x is between x1 and x2
+// y is between y1 and y2 (min and max of the function)
 function plotFunctionGraph(ar, x1, x2, y1, y2)
 {
    for(var i = 0; i < ar.length - 1; i++)
@@ -63,7 +67,9 @@ function plotFunctionGraph(ar, x1, x2, y1, y2)
     }
 }
 
-
+// Returns an object with values of the function 
+// calculated for n points in between x1 and x2
+// Also returns as part of the object the min and max of y values
 function getFunctionValues(x1, x2, n)
 {
     var ar = [];
