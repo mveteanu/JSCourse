@@ -3,7 +3,7 @@ Entire code base of the JavaScript course that I teach in 2017. When refering to
 
 - these examples are intended for students
 - examples were built progresively as new language elements were introduced 
-- p5.js graphics was periodically used as a teaching tool
+- [p5.js](https://p5js.org) graphics was periodically used as a teaching tool
 
 Visual examples
 ---------------
