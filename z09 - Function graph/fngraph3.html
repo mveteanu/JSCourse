@@ -13,9 +13,18 @@ function draw()
 {
     background("lightblue");
 
+    plotFunction(myFunction, start, start + 10 * PI);
+
     // Use an arrow function as argument
-    plotFunction(x => sin(x), start, start + 10 * PI);
+    // (require a newer browser)
+    // plotFunction(x => sin(x), start, start + 10 * PI);
+
     start += 0.1;
+}
+
+function myFunction(x)
+{
+    return sin(x);
 }
 
 </script>
