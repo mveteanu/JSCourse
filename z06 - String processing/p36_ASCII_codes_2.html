@@ -1,0 +1,38 @@
+<script>
+
+var ar = [ 83, 84, 65, 82, 76, 73, 77, 83 ];
+var txt = getText(ar);
+var ar2 = getCodes(txt);
+
+console.log(ar, txt, ar2);
+
+// Return an array with the ASCII codes
+// of the characters inside the string msg
+function getCodes(msg)
+{
+    var ar = [];
+
+    for(var i = 0; i < msg.length; i++)
+    {
+        ar.push( msg.charCodeAt(i) );
+    }
+
+    return ar;
+}
+
+// Function receives an array of numbers (ASCII codes)
+// and return the text that these codes represent
+function getText(arCodes)
+{
+    var s = "";
+
+    for(var i = 0; i < arCodes.length; i++)
+    {
+        var code = arCodes[i];
+        s += String.fromCharCode(code);
+    }
+
+    return s;
+}
+
+</script>

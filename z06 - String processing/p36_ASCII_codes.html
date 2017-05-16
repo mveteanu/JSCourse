@@ -1,0 +1,19 @@
+<script>
+
+var msg = "This is a message.";
+
+for(var i = 0; i < msg.length; i++)
+{
+    // Obtain the character at position i
+    var chr = msg[i];
+
+    // Obtain the ASCII code of character at position i
+    var code = msg.charCodeAt(i);
+
+    // Converts back the code to a string character
+    var chr2 = String.fromCharCode(code);
+
+    console.log( chr + " " + code + " " + chr2 );
+}
+
+</script>
