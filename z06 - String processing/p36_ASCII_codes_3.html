@@ -1,0 +1,21 @@
+<script>
+
+// This script will display in console.log all the letters
+// from A to Z using the ASCII codes
+
+for(var code = 65; code <= 65 + 26 - 1; code++)
+{
+    var chr = String.fromCharCode(code);
+    console.log(code + " - " + chr);
+}
+
+// ... also display the lower case letters
+
+for(var i = 0; i < 26; i++)
+{
+    var code = 97 + i;
+    var chr = String.fromCharCode(code);
+    console.log(code + " - " + chr);
+}
+
+</script>

@@ -1,0 +1,36 @@
+<script>
+
+var msg = "COME HERE QUICKLY!";
+
+console.log(msg);
+
+// Shift letters by 1...
+console.log(encrypt(msg, 1));
+
+// Shift letters by 3
+// Note: Remark that we go beyound 'Z' boundary
+console.log(encrypt(msg, 3));
+
+
+// Function will implement Caesar Cipher to
+// encrypt the msg using the key by
+// shifting each letter to the right by key
+function encrypt(msg, key)
+{
+    var encMsg = "";
+
+    for(var i = 0; i < msg.length; i++)
+    {
+        var code = msg.charCodeAt(i);
+
+        // Encrypt only letters in 'A' ... 'Z' interval
+        if (code >= 65 && code <= 65 + 26 - 1)
+            code += key;
+        
+        encMsg += String.fromCharCode(code);
+    }
+
+    return encMsg;
+}
+
+</script>
