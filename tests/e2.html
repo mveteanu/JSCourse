@@ -1,0 +1,57 @@
+<script>
+
+var s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!";
+var ok = true;
+
+for(var i = 0; i < 1000; i++)
+{
+    var s2 = encrypt(s, i);
+    var s3 = decrypt(s2, i);
+
+    if (s3 != s)
+        ok = false;
+    
+    console.log(i, s, s2, s3);
+}
+console.log("OK: " + ok);
+
+
+function encrypt(msg, key)
+{
+    return encryptHelper(msg, key, (code, key) => (code + key) % 26 );
+}
+
+function decrypt(msg, key)
+{
+    return encryptHelper(msg, key, (code, key) => (code + 26 - key % 26) % 26 );
+}
+
+function encryptHelper(msg, key, fn)
+{
+    var retMsg = "";
+    
+    for(var i = 0; i < msg.length; i++)
+    {
+        var code = msg.charCodeAt(i);
+        var d = 0;
+
+        if ( code >= 65 && code <= 90)
+            d = 65;
+
+        if ( code >= 97 && code <= 122 )
+            d = 97;  
+
+        if ( d != 0 )
+        {
+            code -= d;
+            code = fn(code, key);
+            code += d;
+        }
+
+        retMsg += String.fromCharCode(code); 
+    }
+
+    return retMsg;
+}
+
+</script>

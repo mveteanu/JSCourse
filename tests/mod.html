@@ -1,0 +1,19 @@
+<script>
+
+console.log( mod(-5, 3) );
+console.log( mod(-13, 64) );
+console.log( mod(-1000, 3) );
+console.log( mod(-64,64) );
+console.log( mod(64,64) );
+
+function mod(n, p)
+{
+    if ( n < 0 )
+        n = p - Math.abs(n) % p;
+
+    return n % p;
+}
+
+
+
+</script>

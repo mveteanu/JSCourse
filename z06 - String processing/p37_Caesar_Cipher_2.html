@@ -2,10 +2,11 @@
 
 var msg = "COME HERE QUICKLY!";
 
-console.log(msg);
-console.log(encrypt(msg, 1));
-console.log(encrypt(msg, 3));
-
+// Encrypt with a wide range of keys
+for(var i = 0; i < 30; i++)
+{
+    console.log(i, msg, encrypt(msg, i));
+}
 
 // Function will implement Caesar Cipher to
 // encrypt the msg using the key by
@@ -21,10 +22,9 @@ function encrypt(msg, key)
         // Encrypt only letters in 'A' ... 'Z' interval
         if (code >= 65 && code <= 65 + 26 - 1)
         {
-            // Add key to the code of the letter
-            // Warning: The new code may go beyond 'Z'
-            // ... check the next example to see how to 'wrap-around'
-            code += key;
+            code -= 65;
+            code = (code + key) % 26;
+            code += 65;
         }
 
         encMsg += String.fromCharCode(code);
