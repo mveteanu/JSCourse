@@ -42,7 +42,12 @@ function encrypt(msg, key)
         if ( d != 0 )
         {
             code -= d;
+
             code = mod(code + key, 26);
+
+            // v. claudiu
+            // code = Math.ceil( (k - code) / 26 ) * 26 + code - k;
+
             code += d;
         }
 
