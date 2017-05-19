@@ -1,0 +1,57 @@
+<script>
+
+var msg = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.";
+var ok = true;
+
+// Encrypt with a wide range of keys
+// ... then try to decrypt imediately
+for(var i = 0; i < 300; i++)
+{
+    var encMsg = encrypt(msg, i);
+    var decMsg = encrypt(encMsg, -1 * i);
+
+    if ( msg != decMsg )
+        ok = false;
+
+    console.log(i, msg, encMsg, decMsg);
+}
+
+console.log("Correct: " + ok);
+
+
+// Function will implement Caesar Cipher to
+// encrypt the msg using the key by
+// shifting each letter to the right by key
+function encrypt(msg, key)
+{
+    var encMsg = "";
+
+    for(var i = 0; i < msg.length; i++)
+    {
+        var code = msg.charCodeAt(i);
+
+        // Encrypt only letters in 'A' ... 'Z' interval
+        if (code >= 65 && code <= 65 + 26 - 1)
+        {
+            code -= 65;
+            code = mod(code + key, 26);
+            code += 65;
+        }
+
+        encMsg += String.fromCharCode(code);
+    }
+
+    return encMsg;
+}
+
+
+function mod(n, p)
+{
+    if ( n < 0 )
+        n = p - Math.abs(n) % p;
+
+    return n % p;
+}
+
+
+</script>
