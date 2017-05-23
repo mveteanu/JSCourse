@@ -1,0 +1,30 @@
+<script>
+
+console.log(getMultTable(1, 10));
+
+// Returns a '2D' array with the
+// multiplication table...
+function getMultTable(from, to)
+{
+    var ar = [];
+    
+    for(var i = from; i <= to; i++)
+        ar.push( getMultResults(i, from, to) );
+
+    return ar;
+}
+
+// Returns an array with the results
+// of multiplying number n with all
+// the numbers from 'from' to 'to'
+function getMultResults(n, from, to)
+{
+    var ar = [];
+
+    for(var i = from; i <= to; i++)
+        ar.push( n * i );
+
+    return ar;
+}
+
+</script>
