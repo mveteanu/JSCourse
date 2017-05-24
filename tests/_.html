@@ -1,0 +1,38 @@
+<script>
+
+var s = "This is a message that will be transposed using a matrix."
+var n = 3;
+
+var ar = new Array(n);
+
+for(var row = 0; row < ar.length; row++)
+{
+    ar[row] = new Array(n);
+}
+
+
+var s2 = "";
+var no = Math.ceil(s.length / (n * n));
+for(var i = 0; i < no; i++)
+{
+    for(var row = 0; row < ar.length; row++)
+    {
+        for(var col = 0; col < ar[0].length; col++)
+        {
+            var index = i * n * n + row * n + col;
+            ar[row][col] = index < s.length ? s[index] : "_" ;
+        }
+    }
+
+    for(var col = 0; col < ar[0].length; col++)
+    {
+        for(var row = 0; row < ar.length; row++)
+        {
+            s2 += ar[row][col];
+        }
+    }
+}
+
+console.log(s2);
+
+</script>
