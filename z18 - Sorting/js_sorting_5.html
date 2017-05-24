@@ -1,0 +1,25 @@
+<script>
+
+/*
+    ar is an array of objects.
+    Let's sort the array based on a property of objects
+*/
+
+var ar = [
+    { name : "Jane", age : 95 },
+    { name : "John", age : 1 },
+    { name : "Parker", age : 30 },
+    { name : "Gene", age : 50 },
+    { name : "Andrew", age : 59 }
+];
+
+ar.sort( compareElements );
+
+console.log(ar);
+
+function compareElements(o1, o2)
+{
+    return o1.age - o2.age;
+}
+
+</script>
