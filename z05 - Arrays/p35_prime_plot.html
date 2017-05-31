@@ -1,0 +1,69 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+
+function setup()
+{
+    var n = 10000;
+    
+    // creates a long and narrow canvas
+    createCanvas(n, 150);
+    background(230);
+
+    // get the first n prime numbers
+    var primes = getPrimes(n);
+    drawGapsAsLines(primes);
+    console.log(primes);
+}
+
+// draw the difference between 2 array elements as a series of vertical lines
+// if the array contains prime numbers, the difference is basically the gap between two consecutive primes
+function drawGapsAsLines(ar)
+{
+    for(var i = 0; i < ar.length - 1; i++)
+    {
+        line(i, 0, i, ar[i+1] - ar[i]);
+
+        // display a label every 100 numbers
+        if ( i % 100 == 0 )
+            text(i, i, 100);
+    }
+    
+}
+
+// returns an array of n elements containing the first n prime numbers
+// console.log(getPrimes(10));
+function getPrimes(n)
+{
+    var arPrimes = [];
+    var currNumber = 2;
+
+    while( arPrimes.length < n )
+    {
+        if ( isPrime(currNumber) )
+            arPrimes.push(currNumber);
+
+        currNumber++;
+    }
+
+    return arPrimes;
+}
+
+
+// return if number n is prime by checking if is divisible with any number till sqrt(n)
+function isPrime(n)
+{
+    if ( n < 2 )
+        return false;
+    
+    for(var i = 2; i <= Math.sqrt(n); i++)
+    {
+        if ( n % i == 0 )
+            return false;
+    }
+
+    return true;
+}
+
+</script>
+
