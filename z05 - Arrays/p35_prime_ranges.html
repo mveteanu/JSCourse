@@ -1,0 +1,56 @@
+<script>
+
+var ar = getNextPrimes(10000, 10);
+console.log(ar);
+
+
+// Returns the next m primes greater or equal to n
+// in an array
+function getNextPrimes(n, m)
+{
+    var ar = [];
+    var currNo = n - 1;
+
+    while(ar.length < m)
+    {
+        currNo = getNextPrime(currNo + 1);
+        ar.push(currNo);
+    }
+
+    return ar;
+}
+
+
+// Returns the next prime number that is 
+// greater or equal to n
+// console.log( getNextPrime(1000) );
+function getNextPrime(n)
+{
+    while(true) // infinite loop
+    {
+        if ( isPrime(n) )
+            return n;   // exit only if one prime number is found
+
+        n++;    // it is OK to change n inside function
+                // since n is passed by value...
+    }
+}
+
+// Returns true if number n is prime
+// for(var i = 1; i < 30; i++)
+//    console.log(i, isPrime(i))
+function isPrime(n)
+{
+    if ( n < 2 )
+        return false;
+
+    for(var i = 2; i <= Math.sqrt(n); i++)
+    {
+        if ( n % i == 0 )
+            return false;
+    }
+
+    return true;
+}
+
+</script>
