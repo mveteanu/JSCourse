@@ -15,5 +15,6 @@ Visual examples
 - [Polar coordinates: Eyes following mouse](https://mveteanu.github.io/JSCourse/z14%20-%20Polar%20coordinates/p56_eyes_mouse.html)
 - [Analog clock](https://mveteanu.github.io/JSCourse/z15%20-%20Analog%20clock/analogclock.html)
 - [Function graph: sin(x)](https://mveteanu.github.io/JSCourse/z09%20-%20Function%20graph/fngraph3.html)
+- [Gaps between prime numbers](https://mveteanu.github.io/JSCourse/z19%20-%20Primes/p35_prime_plot.html)
 
 VMA
