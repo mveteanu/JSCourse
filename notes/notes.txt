@@ -163,3 +163,5 @@ Backlog
     - String.fromCharCode(num1, num2, ...)
 - 2D matrixes
 - functions as data
+
+- google question: write a function to generate a random 4 digit unique even number, the four digits cannot be the same, 1234 is valid, but 1134 is not valid

@@ -1,0 +1,60 @@
+<script>
+
+console.log(findMin1([2, 4, 2, 5, 6, -3, 87]));
+console.log(findMin2([2, 4, 2, 5, 6, -3, 87]));
+console.log(findMin3([2, 4, [4, 6, [5, -10], 20], 2, 5, 6, -3, 87]));
+
+// find minimum in an array of arrays using recursion
+function findMin3(ar)
+{
+    var min = Infinity;
+
+    // iterate through all the elements of the array
+    for(var i = 0; i < ar.length; i++)
+    {
+        var el = ar[i];
+
+        // if element is of type array...
+        if (Array.isArray(el))
+        {
+            // call the function recursively to find min...
+            el = findMin3(el);
+        }
+
+        if (el < min)
+            min = el;
+    }
+
+    return min;
+}
+
+
+// ... similar with findMin1, but assume min is first element
+function findMin2(ar)
+{
+    var min = ar[0];
+
+    for(var i = 1; i < ar.length; i++)
+    {
+        if(ar[i] < min)
+            min = ar[i];
+    }
+
+    return min;
+}
+
+// Returns the minimum value in the array
+function findMin1(ar)
+{
+    var min = Infinity;
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        if(ar[i] < min)
+            min = ar[i];
+    }
+
+    return min;
+}
+
+</script>
