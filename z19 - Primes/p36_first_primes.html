@@ -1,0 +1,62 @@
+<script>
+
+// This script will find the maximum gap between two succesive prime numbers 
+// The script will generate then use as input the first n prime numbers
+// See also: https://en.wikipedia.org/wiki/Prime_gap
+
+var ar = getPrimes(10000);
+var o = findMaxGap(ar);
+console.log(o);
+
+// Finds the maximum gap between two consecutive numbers in a series
+// Returns an object with 3 properties: the gap, the first no, the second no
+function findMaxGap(ar)
+{
+    var maxGap = 0;
+    var n1, n2;
+
+    for(var i = 0; i < ar.length - 1; i++)
+    {
+        var gap = ar[i+1] - ar[i];
+        if (gap > maxGap)
+        {
+            maxGap = gap;
+            n1 = ar[i];
+            n2 = ar[i+1];
+        }
+    }
+
+    return { gap : maxGap, n1 : n1, n2 : n2 };
+}
+
+// Returns the first n prime numbers
+function getPrimes(n)
+{
+    var ar = [2]; // init the array with first prime: 2
+    var no = 3;
+
+    while(ar.length < n)
+    {
+        if (!isDividing(no, ar))
+            ar.push(no);
+        
+        no += 2;
+    }
+
+    return ar;
+}
+
+// return true if n is dividing with any
+// number in the array ar
+function isDividing(n, ar)
+{
+    for(var i = 0; i < ar.length; i++)
+    {
+        if (n % ar[i] == 0)
+            return true;
+    }
+
+    return false;
+}
+
+</script>

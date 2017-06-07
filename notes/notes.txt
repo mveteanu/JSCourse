@@ -150,18 +150,24 @@ Lesson
     - eyes following mouse
 - RGB color model
 
-Backlog
+
+Lessons
 =======
 
-- find number of words ocurances in a text (using associative arrays)
-- plot the sine wave
-- plot the graph of a function (e.g. polynomial)
-- bubble sort
-- recursion
 - ASCII code -> encrypt / decrypt text by shifting letters
     - str.charCodeAt(index)
     - String.fromCharCode(num1, num2, ...)
-- 2D matrixes
-- functions as data
+- prime numbers
+- find number of words ocurances in a text (using associative arrays)
+- plot the sine wave
+- plot the graph of a function (e.g. polynomial)
+- javascript osrt
+- bubble sort
+- recursion
 
+
+Backlog
+=======
+
+- 2D matrixes
 - google question: write a function to generate a random 4 digit unique even number, the four digits cannot be the same, 1234 is valid, but 1134 is not valid
