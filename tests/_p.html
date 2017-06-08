@@ -1,0 +1,45 @@
+<script>
+
+
+var n = 100000;
+    
+var primes = getPrimes(n);
+console.log(primes);
+
+
+// returns an array of n elements containing the first n prime numbers
+// console.log(getPrimes(10));
+function getPrimes(n)
+{
+    var arPrimes = [];
+    var currNumber = 2;
+
+    while( arPrimes.length < n )
+    {
+        if ( isPrime(currNumber) )
+            arPrimes.push(currNumber);
+
+        currNumber++;
+    }
+
+    return arPrimes;
+}
+
+
+// return if number n is prime by checking if is divisible with any number till sqrt(n)
+function isPrime(n)
+{
+    if ( n < 2 )
+        return false;
+    
+    for(var i = 2; i <= Math.sqrt(n); i++)
+    {
+        if ( n % i == 0 )
+            return false;
+    }
+
+    return true;
+}
+
+</script>
+
