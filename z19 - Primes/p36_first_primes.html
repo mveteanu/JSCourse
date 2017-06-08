@@ -47,11 +47,18 @@ function getPrimes(n)
 }
 
 // return true if n is dividing with any
-// number in the array ar
+// number <= sqrt(n) in the ordered array ar
 function isDividing(n, ar)
 {
+    var r = Math.sqrt(n);
+    
     for(var i = 0; i < ar.length; i++)
     {
+        // stop the for if the current element in the ordered array
+        // is greater than sqrt(n)
+        if (ar[i] > r)
+            break;
+
         if (n % ar[i] == 0)
             return true;
     }

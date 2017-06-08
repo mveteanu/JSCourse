@@ -1,38 +1,88 @@
+
 <script>
 
+var ar = getPrimes(1000000);
 
-var n = 100000;
-    
-var primes = getPrimes(n);
-console.log(primes);
-
-
-// returns an array of n elements containing the first n prime numbers
-// console.log(getPrimes(10));
+// Returns the first n prime numbers
 function getPrimes(n)
 {
-    var arPrimes = [];
-    var currNumber = 2;
+    var ar = [2]; // init the array with first prime: 2
+    var no = 3;
 
-    while( arPrimes.length < n )
+    while(ar.length < n)
     {
-        if ( isPrime(currNumber) )
-            arPrimes.push(currNumber);
-
-        currNumber++;
+        if (!isDividingWithPrime(no, ar))
+            ar.push(no);
+        
+        no += 2;
     }
 
-    return arPrimes;
+    return ar;
+}
+
+// return true if n is dividing with any
+// prime number <= sqrt(n) in the array ar
+function isDividingWithPrime(n, ar)
+{
+    var r = Math.sqrt(n);
+    
+    for(var i = 0; i < ar.length; i++)
+    {
+        if (ar[i] > r)
+            break;
+        
+        if (n % ar[i] == 0)
+            return true;
+    }
+
+    return false;
 }
 
 
-// return if number n is prime by checking if is divisible with any number till sqrt(n)
+
+// Returns the next m primes greater or equal to n
+// in an array
+function getNextPrimes(n, m)
+{
+    var ar = [];
+    var currNo = n - 1;
+
+    while(ar.length < m)
+    {
+        currNo = getNextPrime(currNo + 1);
+        ar.push(currNo);
+    }
+
+    return ar;
+}
+
+
+// Returns the next prime number that is 
+// greater or equal to n
+// console.log( getNextPrime(1000) );
+function getNextPrime(n)
+{
+    while(true) // infinite loop
+    {
+        if ( isPrime(n) )
+            return n;   // exit only if one prime number is found
+
+        n++;    // it is OK to change n inside function
+                // since n is passed by value...
+    }
+}
+
+// Returns true if number n is prime
+// for(var i = 1; i < 30; i++)
+//    console.log(i, isPrime(i))
 function isPrime(n)
 {
     if ( n < 2 )
         return false;
     
-    for(var i = 2; i <= Math.sqrt(n); i++)
+    var r = Math.sqrt(n);
+
+    for(var i = 2; i <= r; i++)
     {
         if ( n % i == 0 )
             return false;
@@ -41,5 +91,5 @@ function isPrime(n)
     return true;
 }
 
-</script>
 
+</script>
