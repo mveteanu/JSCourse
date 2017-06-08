@@ -1,95 +1,57 @@
-
 <script>
 
-var ar = getPrimes(1000000);
+console.log(getFibNumber1(10));
 
-// Returns the first n prime numbers
-function getPrimes(n)
+console.log(getFibNumber2(10));
+
+var ar = getFibNumbers(100);
+console.log(ar);
+
+
+function getFibNumber1(n)
 {
-    var ar = [2]; // init the array with first prime: 2
-    var no = 3;
+    if (n == 0)
+        return 0;
+
+    if (n == 1)
+        return 1;
+    
+    return getFibNumber1(n - 1) + getFibNumber1(n - 2);
+}
+
+function getFibNumber2(n)
+{
+    if (n == 0)
+        return 0;
+
+    if (n == 1)
+        return 1;
+    
+    var n1 = 0;
+    var n2 = 1;
+
+    for(var i = 2; i <= n; i++)
+    {
+        var no = n1 + n2;
+        n1 = n2;
+        n2 = no;
+    }
+
+    return n2;
+}
+
+function getFibNumbers(n)
+{
+    var ar = [0, 1];
 
     while(ar.length < n)
     {
-        if (!isDividingWithPrime(no, ar))
-            ar.push(no);
-        
-        no += 2;
+        var no = ar.length;
+
+        ar.push(ar[no - 1] + ar[no - 2])
     }
 
     return ar;
 }
-
-// return true if n is dividing with any
-// prime number <= sqrt(n) in the array ar
-function isDividingWithPrime(n, ar)
-{
-    var r = Math.sqrt(n);
-    
-    for(var i = 0; i < ar.length; i++)
-    {
-        if (ar[i] > r)
-            break;
-        
-        if (n % ar[i] == 0)
-            return true;
-    }
-
-    return false;
-}
-
-
-
-// Returns the next m primes greater or equal to n
-// in an array
-function getNextPrimes(n, m)
-{
-    var ar = [];
-    var currNo = n - 1;
-
-    while(ar.length < m)
-    {
-        currNo = getNextPrime(currNo + 1);
-        ar.push(currNo);
-    }
-
-    return ar;
-}
-
-
-// Returns the next prime number that is 
-// greater or equal to n
-// console.log( getNextPrime(1000) );
-function getNextPrime(n)
-{
-    while(true) // infinite loop
-    {
-        if ( isPrime(n) )
-            return n;   // exit only if one prime number is found
-
-        n++;    // it is OK to change n inside function
-                // since n is passed by value...
-    }
-}
-
-// Returns true if number n is prime
-// for(var i = 1; i < 30; i++)
-//    console.log(i, isPrime(i))
-function isPrime(n)
-{
-    if ( n < 2 )
-        return false;
-    
-    var r = Math.sqrt(n);
-
-    for(var i = 2; i <= r; i++)
-    {
-        if ( n % i == 0 )
-            return false;
-    }
-
-    return true;
-}
-
 
 </script>
