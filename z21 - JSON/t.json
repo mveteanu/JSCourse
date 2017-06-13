@@ -1,0 +1,11 @@
+{	"firstName" : "John",
+	"lastName": "Doe",
+	"age" : 100,
+	"hobbies" : ["H1","H2", "H3"],
+	"address" :
+	{	"city" : "Hollywood",
+		"state" : "FL",
+		"street" : "4000 Hollywood Blvd.",
+		"zip" : "33020"
+	}
+}

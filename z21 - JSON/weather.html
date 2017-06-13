@@ -1,0 +1,33 @@
+<script src="../libraries/p5.js"></script>
+
+<script>
+
+function setup()
+{
+    getWeather("Miami", "US", "metric");
+}
+
+function getWeather(city, country, units)
+{
+    // Please don't use my key
+    // ... get your own key from openweathermap.org
+    var appId = "f38eceaf538fa1a341028d6e626ec24b";
+    var urlBase = "http://api.openweathermap.org/data/2.5/weather";
+
+    var url = urlBase + "?q=" + city + "," + country + 
+            "&units=" + units +
+            "&appid=" + appId;
+
+    loadJSON(url, onDataReceived);
+}
+
+function onDataReceived(oData)
+{
+    var city = oData.name;
+    var temp = oData.main.temp;
+
+    // Display the weather temp data in the console.log
+    console.log("Air temperature in " + city + " is " + temp);
+}
+
+</script>
