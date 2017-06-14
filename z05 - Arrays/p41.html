@@ -1,0 +1,52 @@
+<script>
+
+var ar = [-2, 3, 0, 5, 100];
+
+console.log( getBiggerNumbers(ar, 0) );
+
+// ... pass condition as a function name
+console.log( extractNumbers(ar, fnCompare) );
+
+// ... pass condition as an anonymous function
+console.log( extractNumbers(ar, function (el) { return el > 0 } ) );
+
+// ... pass condition as a lambda expression
+// supported only in newer versions of JS
+console.log( extractNumbers(ar, (el) => el > 0) );
+
+
+function fnCompare(el)
+{
+    return el > 0;
+}
+
+// Get all the numbers in the array that are bigger than no
+function getBiggerNumbers(ar, no)
+{
+    var ar2 = [];
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        if ( ar[i] > no )
+            ar2.push(ar[i]);
+    }
+
+    return ar2;
+}
+
+// Function extract all the numbers from array ar
+// that met the specified condition
+function extractNumbers(ar, condition)
+{
+    var ar2 = [];
+
+    for(var i = 0; i < ar.length; i++)
+    {
+        if( condition(ar[i]) )
+            ar2.push(ar[i]);
+    }
+
+    return ar2;
+}
+
+</script>
