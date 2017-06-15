@@ -1,0 +1,65 @@
+<script>
+
+var s = "This is a . message that is for test.";
+
+console.log( startsWith(s, "This") );
+console.log( endsWith(s, ".") );
+console.log( findOccurancesOfChar(s, " ") );
+console.log( findOccurancesOfStr(s, "is") );
+
+// Returns the positions within string s
+// where character c appears
+function findOccurancesOfChar(s, c)
+{
+    var ar = [];
+
+    for(var i = 0; i < s.length; i++)
+    {
+        if ( s[i] == c )
+            ar.push(i);
+    }
+
+    return ar;
+}
+
+// Returns an array with the positions
+// where subStr appear in string s
+function findOccurancesOfStr(s, subStr)
+{
+    var ar = [];
+    var from = 0;
+
+    while(true)
+    {
+        var pos = s.indexOf(subStr, from);
+        if (pos == -1)
+            break;
+
+        ar.push(pos);
+        from = pos + subStr.length;
+    }
+
+    return ar;
+}
+
+
+// Return true if string s starts with subStr
+function startsWith(s, subStr)
+{
+    return s.indexOf(subStr) == 0;
+    
+    // var pos = s.indexOf(subStr);
+    // if (pos == 0)
+    //     return true;
+    // else
+    //     return false;
+}
+
+// Returns true if the string s ends with subStr
+function endsWith(s, subStr)
+{
+    var expectedPos = s.length - subStr.length;
+    return s.lastIndexOf(subStr) == expectedPos;
+}
+
+</script>
