@@ -1,0 +1,58 @@
+
+<script>
+
+// Convert from string to codes
+//     - program an encoder: turn a message into a sequence of numbers in a comma separated string
+//     - program a decoder: turn the numbers (from the comma separated string) back into a message
+
+var s = "This is a message.";
+
+var sCodes = getCodesAsCSV(s);   // "97,98,99"
+console.log(sCodes);
+console.log(getMessageFromCSV(sCodes) );
+
+// var ar = getCodesAsArray(s);
+// console.log(ar);
+// console.log( getMessageFromArray(ar) );
+
+
+// Returns a string in format CSV with the ASCII codes of string s
+function getCodesAsCSV(s)
+{
+    var ar = getCodesAsArray(s);
+    return ar.join(",");
+}
+
+// Returns a string built from the ASCII codes specified in the CSV formatted string
+function getMessageFromCSV(s)
+{
+    var ar = s.split(",");
+    return getMessageFromArray(ar);
+}
+
+
+// Returns an array with the ASCII codes of each character in the string s
+function getCodesAsArray(s)
+{
+    var ar = [];
+
+    for(var i = 0; i < s.length; i++)
+        ar.push( s.charCodeAt(i) );
+
+    return ar;
+}
+
+// Construct a string from the ASCII codes specified in array ar
+function getMessageFromArray(ar)
+{
+    var s = "";
+
+    for(var i = 0; i < ar.length; i++)
+        s += String.fromCharCode( ar[i] );
+
+    return s;
+}
+
+
+
+</script>
