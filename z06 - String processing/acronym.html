@@ -1,0 +1,27 @@
+
+<script>
+
+console.log( getAcronym("random   access memory") );
+
+// returns the acronym for a phrase. 
+// e.g. "random access memory" ==> "RAM"
+// assume the text doesn't contain punctuation signs
+function getAcronym(text)
+{
+    var words = text.split(" ");
+    var acronym = "";
+
+    for(var i = 0; i < words.length; i++)
+    {
+        var word = words[i];
+        if (word.length > 0)
+        {
+            var letter = word[0];
+            acronym += letter.toUpperCase();
+        }
+    }
+
+    return acronym;
+}
+
+</script>

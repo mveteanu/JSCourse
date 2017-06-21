@@ -1,0 +1,35 @@
+
+<script>
+
+console.log(getSum1(100));
+console.log(getSum2(100));
+
+// Returns the sum of numbers from 1 to n
+// Function will use a while loop
+function getSum2(n)
+{
+    var sum = 0;
+    var i = 1;
+
+    while(i <= n)
+    {
+        sum += i;
+        i++;
+    }
+
+    return sum;
+}
+
+// Returns the sum of numbers from 1 to n 
+// using a for loop
+function getSum1(n)
+{
+    var sum = 0;
+
+    for(var i = 1; i <= n; i++)
+        sum += i;
+
+    return sum;
+}
+
+</script>

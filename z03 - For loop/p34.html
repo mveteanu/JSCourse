@@ -1,0 +1,28 @@
+
+<script>
+
+console.log(getSumAsText(10));
+
+// Returns the sum of numbers from 1 to n
+// as a string. E.g.: "1 + 2 + 3 + 4 + 5 = 15"
+// Homework: refactor this function...
+function getSumAsText(n)
+{
+    var text = "";
+    var sum = 0;
+
+    // loop through elements from 1 to n-1
+    for(var i = 1; i < n; i++)
+    {
+        text += i + " + ";
+        sum += i;
+    }
+
+    // add n to the sum
+    sum += n;
+    text += n + " = " + sum;
+
+    return text;
+}
+
+</script>
