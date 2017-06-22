@@ -1,0 +1,58 @@
+<script src="../libraries/p5.js"></script>
+<script>
+
+var noRows = 30;
+var noCols = 50;
+var squareSize = 8;
+
+var colorOff = "White";
+var colorOn = "Black"
+
+function setup()
+{
+    createCanvas(600, 500);
+    background("lightblue");
+
+    displaySquares();
+}
+
+function mousePressed()
+{
+    var hitSquare = findSquare(mouseX, mouseY);
+    if (hitSquare.col >= noCols || hitSquare.row >= noRows)
+        return;
+
+    var x = hitSquare.col * squareSize;
+    var y = hitSquare.row * squareSize;
+    
+    fill(colorOn);
+    rect(x, y, squareSize, squareSize);
+}
+
+// Finds the row and column corresponding to coordinates x and y
+function findSquare(x, y)
+{
+    var col = Math.floor( x / squareSize );
+    var row = Math.floor( y / squareSize );
+
+    return {row : row, col : col};
+}
+
+function displaySquares()
+{
+    fill(colorOff);
+
+    for(var row = 0; row < noRows; row++)
+    {
+        for(var col = 0; col < noCols; col++)
+        {
+            var x = col * squareSize;
+            var y = row * squareSize;
+
+            rect(x, y, squareSize, squareSize);
+        }
+    }
+}
+
+
+</script>
