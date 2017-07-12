@@ -1,0 +1,37 @@
+
+<script>
+
+var ar = getSums(11);
+displaySumsArray(ar);
+
+function displaySumsArray(ar)
+{
+    for(var i = 0; i < ar.length; i++)
+        console.log("SumTo(" + i + ") = ", ar[i]);
+}
+
+// Function returns an array with n elements
+// Each element is the sum of numbers from 0 up to the array element index
+// [0] = 0, [1] = 1, [2] = 3, ...
+function getSums(n)
+{
+    var ar = [];
+
+    for(var i = 0; i < n; i++)
+        ar.push( getSum(i) );
+
+    return ar;
+}
+
+// Returns the sum of numbers from 1 to n
+function getSum(n)
+{
+    var sum = 0;
+
+    for(var i = 1; i <= n; i++)
+        sum += i;
+
+    return sum;
+}
+
+</script>
