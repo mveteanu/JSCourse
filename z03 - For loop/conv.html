@@ -1,0 +1,28 @@
+<script>
+
+// Loop through all fahrenheit values
+// from 0 to 100
+// and convert them to C then back to F
+for(var f1 = 0; f1 <= 100; f1++)
+{
+    var c = ftoc(f1);
+    var f2 = ctof(c);
+
+    console.log(f1, c, f2, f1 == f2);
+}
+
+// fahrenheit to celsius
+// T(°C) = (T(°F) - 32) × 5/9
+function ftoc(t)
+{
+    return (t - 32) * (5/9);
+}
+
+ // celsius to fahrenheit
+ // T(°F) = T(°C) × 9/5 + 32
+function ctof(t)
+{
+    return t * (9/5) + 32;
+}
+
+</script>
