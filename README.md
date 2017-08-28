@@ -1,9 +1,9 @@
 # JSCourse
 Entire code base of the JavaScript course that I teach in 2017. When refering to these examples please remember:
 
-- these examples are intended for students
+- these examples are intended for students with no prior coding experience
 - examples were built progresively as new language elements were introduced 
-- [p5.js](https://p5js.org) graphics was periodically used as a teaching tool
+- [p5.js](https://p5js.org) library is periodically used as a teaching tool
 
 Visual examples
 ---------------
@@ -16,5 +16,7 @@ Visual examples
 - [Analog clock](https://mveteanu.github.io/JSCourse/z15%20-%20Analog%20clock/analogclock.html)
 - [Function graph: sin(x)](https://mveteanu.github.io/JSCourse/z09%20-%20Function%20graph/fngraph3.html)
 - [Gaps between prime numbers](https://mveteanu.github.io/JSCourse/z19%20-%20Primes/p35_prime_plot.html)
+
+Note: You can also browse and play with this example on [thimble](https://thimbleprojects.org/vmasoft/308826).
 
 VMA
