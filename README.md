@@ -17,6 +17,6 @@ Visual examples
 - [Function graph: sin(x)](https://mveteanu.github.io/JSCourse/z09%20-%20Function%20graph/fngraph3.html)
 - [Gaps between prime numbers](https://mveteanu.github.io/JSCourse/z19%20-%20Primes/p35_prime_plot.html)
 
-Note: You can also browse and play with this example on [thimble](https://thimbleprojects.org/vmasoft/308826).
+Note: You can edit and play with these examples on [thimble](https://thimbleprojects.org/vmasoft/308826).
 
 VMA
