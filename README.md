@@ -16,6 +16,7 @@ Visual examples
 - [Analog clock](https://mveteanu.github.io/JSCourse/z15%20-%20Analog%20clock/analogclock.html)
 - [Function graph: sin(x)](https://mveteanu.github.io/JSCourse/z09%20-%20Function%20graph/fngraph3.html)
 - [Gaps between prime numbers](https://mveteanu.github.io/JSCourse/z19%20-%20Primes/p35_prime_plot.html)
+- [Blocky](https://mveteanu.github.io/JSCourse/z22%20-%20Blocky/blocky_2.html)
 
 Note: You can edit and play these examples on [thimble](https://thimbleprojects.org/vmasoft/308826).
 
