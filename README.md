@@ -1,3 +1,7 @@
+# News
+
+For a much smoother introduction to coding (without setup and configuration hustles) I recommend [codeguppy.com](https://codeguppy.com)  The site contains also many of the examples from this course.
+
 # JSCourse
 Entire code base of the JavaScript course that I teach in 2017. When refering to these examples please remember:
 
