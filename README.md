@@ -22,6 +22,6 @@ This repository contains the entire codebase of the JavaScript course I taught i
 - [Gaps Between Prime Numbers](https://mveteanu.github.io/JSCourse/z19%20-%20Primes/p35_prime_plot.html)
 - [Blocky](https://mveteanu.github.io/JSCourse/z22%20-%20Blocky/blocky_2.html)
 
-Note: You can edit and play with these examples on [Thimble](https://thimbleprojects.org/vmasoft/308826).
+📢 Note: Check also the coding curriculum from [codeguppy.com](https://codeguppy.com)
 
 — VMA
